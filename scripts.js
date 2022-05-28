@@ -48,37 +48,39 @@ const options = {
 form.addEventListener("submit", (e) => {
   e.preventDefault();
 
-  getWeather(locationInputField.value)
-    .then((data) => {
+  getWeather(locationInputField.value).then(
+    (data) => {
       updateUI(data);
-    })
-    .catch((err) => {
+    },
+    (err) => {
       alert(err);
-    });
+    }
+  );
 });
 
 async function getWeather(location) {
   if (location.trim() === "") {
+    locationInputField.value = "";
     throw new Error("You passed invalid data");
   }
 
-  try {
-    const queryUrl = buildQueryURL(location);
-    const response = await fetch(queryUrl, options);
-    const jsonData = await response.json();
-    return jsonData;
-  } catch (error) {
-    console.log(error);
+  const queryUrl = buildQueryURL(location);
+  const response = await fetch(queryUrl, options);
+  if (!response.ok) {
+    return Promise.reject(`Request for weather data of ${location} failed.`);
   }
+  const jsonData = await response.json();
+  return jsonData;
 }
 
 // INIT
 (() => {
-  getWeather("Lagos")
-    .then((data) => {
+  getWeather("Lagos").then(
+    (data) => {
       updateUI(data);
-    })
-    .catch((err) => {
+    },
+    (err) => {
       alert(err);
-    });
+    }
+  );
 })();
