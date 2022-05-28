@@ -21,7 +21,7 @@ body {
     color: white;
 
     height: 100%;
-    background-image: url(./resources/sun/sunny.jpg);
+    background-image: url(./resources/background.jpg);
     background-size: cover;
     background-repeat: no-repeat;
 
