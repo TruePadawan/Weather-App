@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="mobile-style.css">
+    <script src="scripts.js" defer></script>
+    <title>The Weather</title>
+</head>
+
+<body>
+    <form>
+        <input type="text" placeholder="Location" required>
+        <button type="submit">Search</button>
+    </form>
+    <div class="weather-data">
+        <img class="weather-icon" src="./resources/116.png" alt="Weather Icon">
+        <span class="weather-temp">
+            <span class="farenheit">68°F</span>
+            <span class="celsius">20°C</span>
+        </span>
+        <span class="weather-condition">Partly Cloudy</span>
+    </div>
+    <div class="city-info">
+        <span class="name">London</span>
+        <span class="country">United Kindgom</span>
+    </div>
+    <ul class="extra-info">
+        <li>
+            <img src="./resources/wind_speed.png" alt="Wind Speed">
+            <span>
+                <span>Wind Speed</span>
+                <span class="wind-speed">19.2m/h</span>
+            </span>
+        </li>
+        <li>
+            <img src="./resources/humidity.png" alt="Humidity">
+            <span>
+                <span>Humidity</span>
+                <span class="humidity">60%</span>
+            </span>
+        </li>
+        <li>
+            <img src="./resources/pressure.png" alt="Pressure">
+            <span>
+                <span>Pressure</span>
+                <span class="pressure">30.15 inch</span>
+            </span>
+        </li>
+    </ul>
+</body>
+
+</html>
