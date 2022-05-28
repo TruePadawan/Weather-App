@@ -2,6 +2,10 @@ function $(selector) {
   return document.querySelector(selector);
 }
 
+function buildQueryURL(locationParam) {
+  return `https://weatherapi-com.p.rapidapi.com/current.json?q=${locationParam}`;
+}
+
 const form = $("form");
 const locationInputField = form.querySelector("input");
 
@@ -68,6 +72,13 @@ async function getWeather(location) {
   }
 }
 
-function buildQueryURL(locationParam) {
-  return `https://weatherapi-com.p.rapidapi.com/current.json?q=${locationParam}`;
-}
+// INIT
+(() => {
+  getWeather("Lagos")
+    .then((data) => {
+      updateUI(data);
+    })
+    .catch((err) => {
+      alert(err);
+    });
+})();
