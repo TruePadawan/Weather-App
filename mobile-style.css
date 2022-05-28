@@ -1,0 +1,22 @@
+@media screen and (max-width: 430px) {
+    body {
+        padding: 4rem 1rem 0 1rem;
+    }
+
+    .extra-info {
+        margin-top: 1rem;
+        gap: 0;
+        row-gap: 20px;
+    }
+
+    .extra-info>li {
+        gap: 1rem;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .extra-info>li>img {
+        width: 32px;
+        height: 32px;
+    }
+}
