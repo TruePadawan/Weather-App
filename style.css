@@ -22,7 +22,6 @@ body {
 
     height: 100%;
     background-image: url(./resources/background.jpg);
-    background-size: cover;
     background-repeat: no-repeat;
 
     display: flex;
@@ -147,7 +146,7 @@ button:hover {
 }
 
 .extra-info>li>span {
-    color: white;
+    color: black;
     width: 100%;
     display: flex;
     flex-direction: column;
