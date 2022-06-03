@@ -101,6 +101,7 @@ button:hover {
 }
 
 .weather-condition {
+    text-align: center;
     font-family: 'Sanchez', serif;
     font-size: 20px;
 }
